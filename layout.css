@@ -1,0 +1,245 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #343434;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.container {
+  margin: 0 2rem;
+  padding: 4rem 2rem 3rem 2rem;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  color: #d86c20;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #0d0a0d;
+  padding: 1rem 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+nav ul li {
+  margin: 0.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#portfolio {
+  background-image: url("/kuvat/city.jpeg");
+}
+
+.background-container {
+  background-image: url(./kuvat/home.jpeg); /* Ссылка на фотографию */
+  background-size: cover; /* Растянуть изображение, чтобы покрыть контейнер */
+  background-position: center; /* Центрировать изображение */
+  background-repeat: no-repeat; /* Избегать повторения изображения */
+  text-align: left;
+  padding: 50px; /* Отступы вокруг текста */
+}
+
+.blackBox {
+  background-color: rgba(52, 52, 52, 0.8);
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.blackBox h1,
+.blackBox h2 {
+  color: #d96c1f;
+}
+
+.blackBox h2 {
+  margin: 2rem 2rem 2rem 0;
+}
+
+ol li {
+  display: list-item;
+  list-style: decimal;
+  list-style-position: inside;
+  color: #e6be8d;
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+ol {
+  counter-reset: item;
+}
+ol li {
+  display: block;
+}
+ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+#menneisyys {
+  background-color: #f2f2f2;
+  color: #333333;
+  padding-left: 1rem;
+}
+
+#menneisyys h1 {
+  color: #333333;
+  margin-left: 1rem;
+}
+
+#groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem 1rem 0;
+}
+
+.part {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: solid #343434 1px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.part img {
+  width: 100%;
+  height: 100%;
+}
+
+.part a {
+  text-decoration: none;
+  color: #e1bc90;
+}
+
+hr {
+  border: 1px solid lightblue;
+  margin: 2rem 0 2rem;
+}
+
+#nykyisyys article {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#nykyisyys article img {
+  max-width: 35%;
+  max-height: 35%;
+}
+
+#tulevaisuus article img {
+  max-width: 35%;
+  float: left;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.field {
+  clear: both;
+  text-align: right;
+  margin: 1rem 0;
+}
+
+label {
+  float: left;
+}
+input {
+  width: 30rem;
+  height: 20px;
+}
+
+button {
+  background-color: #d76518;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  height: 3.5rem;
+  width: 7rem;
+}
+
+.lähetä {
+  text-align: center;
+}
+
+@media screen and (min-width: 426px) {
+  #groups {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .part-1,
+  .part-2 {
+    flex-basis: 45%;
+    max-width: 100%;
+  }
+
+  .part-3 {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  nav {
+    padding: 3rem 0;
+  }
+
+  #groups {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .part-1,
+  .part-2,
+  .part-3 {
+    flex-basis: auto;
+  }
+
+  input {
+    width: 60rem;
+    height: 20px;
+  }
+}
