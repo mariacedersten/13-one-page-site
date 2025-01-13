@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+  padding-top: 10rem; /* Увеличьте значение в зависимости от высоты nav */
   margin: 0 2rem;
   padding: 4rem 2rem 3rem 2rem;
 }
